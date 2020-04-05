@@ -5,27 +5,25 @@ import android.media.MediaPlayer;
 import android.util.Log;
 
 public class SoundsHelper {
-    private MediaPlayer mp = null;
+    private MediaPlayer mp;
 
-    public void stop() {
-        if (mp != null) {
-            mp.stop();
-            mp.release();
-        }
+    public SoundsHelper() {
+        mp = new MediaPlayer();
     }
 
-    private void create(Context context, int uri) {
-        mp = MediaPlayer.create(context, uri);
+    public void stop() {
+        mp.stop();
+        mp.release();
+    }
+
+    private void create(Context context, int resid) {
+        mp = MediaPlayer.create(context, resid);
     }
 
     public void play(Context context, int resid) {
         try {
-            if (mp == null) {
-                create(context, resid);
-            } else if (mp.isPlaying()) {
-                stop();
-                create(context, resid);
-            }
+            stop();
+            create(context, resid);
             mp.start();
         } catch (Exception e) {
             e.printStackTrace();
