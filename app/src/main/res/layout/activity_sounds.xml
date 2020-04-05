@@ -19,7 +19,6 @@
         app:srcCompat="@mipmap/icon_animals" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
         android:layout_width="0dp"
         android:layout_height="72dp"
         android:layout_marginStart="80dp"

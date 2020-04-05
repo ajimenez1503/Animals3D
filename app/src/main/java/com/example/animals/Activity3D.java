@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.animals.helper.ArCoreHelper;
@@ -31,7 +32,7 @@ public class Activity3D extends AppCompatActivity {
         super.onResume();
 
         // ARCore requires camera permission to operate.
-        if (!CameraPermissionHelper.hasCameraPermission(this)) {
+        if (CameraPermissionHelper.hasCameraPermission(this)) {
             CameraPermissionHelper.requestCameraPermission(this);
             return;
         }
@@ -46,18 +47,15 @@ public class Activity3D extends AppCompatActivity {
                         | UnavailableDeviceNotCompatibleException e) {
                     Log.e(TAG, "Exception: " + e.toString());
                     e.printStackTrace();
-                    return;
                 }
-            } else {
-                return;
             }
         }
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] results) {
-        if (!CameraPermissionHelper.hasCameraPermission(this)) {
-            Toast.makeText(this, R.string.Logging_camera_persmission, Toast.LENGTH_LONG).show();
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] results) {
+        if (CameraPermissionHelper.hasCameraPermission(this)) {
+            Toast.makeText(this, R.string.Logging_camera_permission, Toast.LENGTH_LONG).show();
             if (!CameraPermissionHelper.shouldShowRequestPermissionRationale(this)) {
                 // Permission denied with checking "Do not ask again".
                 CameraPermissionHelper.launchPermissionSettings(this);

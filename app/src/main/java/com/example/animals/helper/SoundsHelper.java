@@ -12,18 +12,21 @@ public class SoundsHelper {
     }
 
     public void stop() {
-        mp.stop();
+        if (mp.isPlaying()) {
+            mp.stop();
+        }
+        mp.reset();
         mp.release();
     }
 
-    private void create(Context context, int resid) {
-        mp = MediaPlayer.create(context, resid);
+    private void create(Context context, int soundId) {
+        mp = MediaPlayer.create(context, soundId);
     }
 
-    public void play(Context context, int resid) {
+    public void play(Context context, int soundId) {
         try {
             stop();
-            create(context, resid);
+            create(context, soundId);
             mp.start();
         } catch (Exception e) {
             e.printStackTrace();

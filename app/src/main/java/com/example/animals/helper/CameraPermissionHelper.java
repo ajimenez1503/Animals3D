@@ -21,8 +21,7 @@ public final class CameraPermissionHelper {
      * Check to see we have the necessary permissions for this app.
      */
     public static boolean hasCameraPermission(Activity activity) {
-        return ContextCompat.checkSelfPermission(activity, CAMERA_PERMISSION)
-                == PackageManager.PERMISSION_GRANTED;
+        return ContextCompat.checkSelfPermission(activity, CAMERA_PERMISSION) != PackageManager.PERMISSION_GRANTED;
     }
 
     /**
