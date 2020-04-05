@@ -3,9 +3,7 @@ package com.example.animals;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.animals.helper.ArAvailability;
 
 public class MainActivity extends AppCompatActivity {
