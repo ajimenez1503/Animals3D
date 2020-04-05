@@ -66,6 +66,5 @@ public class ActivitySounds extends AppCompatActivity {
             e.printStackTrace();
             Log.e(TAG, "Exception: " + e.toString());
         }
-
     }
 }

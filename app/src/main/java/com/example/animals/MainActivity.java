@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
     }
   }
 
-  /**
-   * Called when the user taps the Sounds button
-   */
+    /**
+     * Called when the user taps the Sounds button
+     */
   public void openSoundsActivity(View view) {
     Intent intent = new Intent(this, ActivitySounds.class);
     startActivity(intent);
