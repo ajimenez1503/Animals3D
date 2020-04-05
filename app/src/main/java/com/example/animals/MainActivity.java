@@ -10,23 +10,27 @@ import com.example.animals.helper.ArCoreHelper;
 
 public class MainActivity extends AppCompatActivity {
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
-  }
-
-  /** Called when the user taps the 3D button */
-  public void open3DActivity(View view) {
-    if (ArCoreHelper.isArCoreSupported(this)) {
-      Intent intent = new Intent(this, Activity3D.class);
-      startActivity(intent);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
     }
-  }
 
-  /** Called when the user taps the Sounds button */
-  public void openSoundsActivity(View view) {
-    Intent intent = new Intent(this, ActivitySounds.class);
-    startActivity(intent);
-  }
+    /**
+     * Called when the user taps the 3D button
+     */
+    public void open3DActivity(View view) {
+        if (ArCoreHelper.isArCoreSupported(this)) {
+            Intent intent = new Intent(this, Activity3D.class);
+            startActivity(intent);
+        }
+    }
+
+    /**
+     * Called when the user taps the Sounds button
+     */
+    public void openSoundsActivity(View view) {
+        Intent intent = new Intent(this, ActivitySounds.class);
+        startActivity(intent);
+    }
 }
