@@ -1,5 +1,7 @@
 package com.example.animals;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -71,6 +73,16 @@ public class Activity3D extends AppCompatActivity {
      */
     public void show3DTiger(View view) {
         Log.i(TAG, "Open 3D Tiger");
+        Intent sceneViewerIntent = new Intent(Intent.ACTION_VIEW);
+        Uri intentUri =
+                Uri.parse("https://arvr.google.com/scene-viewer/1.0").buildUpon()
+                        .appendQueryParameter("file", "https://storage.googleapis.com/ar-answers-in-search-models/static/Tiger/model.glb")
+                        .appendQueryParameter("mode", "ar_only")
+                        .appendQueryParameter("title", "Tiger")
+                        .build();
+        sceneViewerIntent.setData(intentUri);
+        sceneViewerIntent.setPackage("com.google.ar.core");
+        startActivity(sceneViewerIntent);
     }
 
     /**
@@ -78,5 +90,15 @@ public class Activity3D extends AppCompatActivity {
      */
     public void show3DBear(View view) {
         Log.i(TAG, "Open 3D Bear");
+        Intent sceneViewerIntent = new Intent(Intent.ACTION_VIEW);
+        Uri intentUri =
+                Uri.parse("https://arvr.google.com/scene-viewer/1.0").buildUpon()
+                        .appendQueryParameter("file", "https://storage.googleapis.com/ar-answers-in-search-models/static/BrownBear/model.glb")
+                        .appendQueryParameter("mode", "ar_only")
+                        .appendQueryParameter("title", "Bear")
+                        .build();
+        sceneViewerIntent.setData(intentUri);
+        sceneViewerIntent.setPackage("com.google.ar.core");
+        startActivity(sceneViewerIntent);
     }
 }
