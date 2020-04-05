@@ -20,8 +20,8 @@
 
     <ImageButton
         android:id="@+id/imageButton6"
-        android:layout_width="0dp"
-        android:layout_height="72dp"
+        android:layout_width="107dp"
+        android:layout_height="86dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="80dp"
@@ -52,15 +52,42 @@
         android:layout_width="0dp"
         android:layout_height="91dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="80dp"
         android:background="@android:color/transparent"
-        android:contentDescription="@string/Button_horse"
+        android:contentDescription="@string/button_horse"
         android:onClick="playHorseSounds"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@id/imageButton7"
         app:layout_constraintTop_toBottomOf="@+id/imageButton6"
         app:srcCompat="@mipmap/horse" />
+
+    <ImageButton
+        android:id="@+id/imageButton11"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/button_dog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton7"
+        app:srcCompat="@mipmap/dog" />
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="80dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/button_duck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton11"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton8"
+        app:srcCompat="@mipmap/duck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
