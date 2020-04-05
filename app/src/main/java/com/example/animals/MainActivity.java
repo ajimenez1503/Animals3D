@@ -2,8 +2,6 @@ package com.example.animals;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +9,6 @@ import com.example.animals.helper.ArAvailability;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button mArButton = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
