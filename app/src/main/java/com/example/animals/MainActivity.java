@@ -3,9 +3,7 @@ package com.example.animals;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.animals.helper.ArAvailability;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,9 +22,7 @@ public class MainActivity extends AppCompatActivity {
     }
   }
 
-  /**
-   * Called when the user taps the Sounds button
-   */
+  /** Called when the user taps the Sounds button */
   public void openSoundsActivity(View view) {
     Intent intent = new Intent(this, ActivitySounds.class);
     startActivity(intent);
