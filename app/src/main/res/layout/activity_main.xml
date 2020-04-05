@@ -38,6 +38,7 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="117dp"
         android:layout_marginEnd="100dp"
+        android:onClick="open3DActivity"
         android:text="@string/button_see3D"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
