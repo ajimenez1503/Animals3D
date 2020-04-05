@@ -13,10 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ActivitySounds"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".Activity3D"
-            android:parentActivityName=".MainActivity">
-
-        </activity>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,9 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- "AR Optional" app, contains non-AR features that can be used when
-     "Google Play Services for AR" (ARCore) is not available. -->
+        <!--
+ "AR Optional" app, contains non-AR features that can be used when
+     "Google Play Services for AR" (ARCore) is not available.
+        -->
         <meta-data
             android:name="com.google.ar.core"
             android:value="optional" />
