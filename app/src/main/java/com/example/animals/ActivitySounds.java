@@ -42,4 +42,20 @@ public class ActivitySounds extends AppCompatActivity {
         Log.i(TAG, "Play Bear sounds");
         soundsHelper.play(this, R.raw.bear);
     }
+
+    /**
+     * Called when the user taps the Bear button
+     */
+    public void playCatSounds(View view) {
+        Log.i(TAG, "Play Cat sounds");
+        soundsHelper.play(this, R.raw.cat);
+    }
+
+    /**
+     * Called when the user taps the Bear button
+     */
+    public void playHorseSounds(View view) {
+        Log.i(TAG, "Play Horse sounds");
+        soundsHelper.play(this, R.raw.horse);
+    }
 }

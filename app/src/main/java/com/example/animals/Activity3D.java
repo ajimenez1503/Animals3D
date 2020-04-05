@@ -84,6 +84,28 @@ public class Activity3D extends AppCompatActivity {
         ArCoreHelper.showArObject(
                 this,
                 "https://storage.googleapis.com/ar-answers-in-search-models/static/BrownBear/model.glb",
-                "bear");
+                "Bear");
+    }
+
+    /**
+     * Called when the user taps the Bear button
+     */
+    public void show3DCat(View view) {
+        Log.i(TAG, "Open 3D Cat");
+        ArCoreHelper.showArObject(
+                this,
+                "https://storage.googleapis.com/ar-answers-in-search-models/static/ShortHairedCat/model.glb",
+                "Cat");
+    }
+
+    /**
+     * Called when the user taps the Bear button
+     */
+    public void show3DHorse(View view) {
+        Log.i(TAG, "Open 3D Horse");
+        ArCoreHelper.showArObject(
+                this,
+                "https://storage.googleapis.com/ar-answers-in-search-models/static/ArabianHorse/model.glb",
+                "Horse");
     }
 }
