@@ -5,4 +5,6 @@
     <string name="button_see3D">3D Animals</string>
     <string name="button_tiger">Tiger</string>
     <string name="button_bear">Bear</string>
+    <string name="Logging_ARCore_error_not_installed">ARCore not installed. This functionality can not be used.</string>
+    <string name="Logging_camera_persmission">Camera permission is needed to run this application</string>
 </resources>

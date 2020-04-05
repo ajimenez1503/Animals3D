@@ -3,17 +3,67 @@ package com.example.animals;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.animals.helper.ArAvailability;
+import com.example.animals.helper.CameraPermissionHelper;
+import com.google.ar.core.Session;
+import com.google.ar.core.exceptions.UnavailableApkTooOldException;
+import com.google.ar.core.exceptions.UnavailableArcoreNotInstalledException;
+import com.google.ar.core.exceptions.UnavailableDeviceNotCompatibleException;
+import com.google.ar.core.exceptions.UnavailableSdkTooOldException;
 
 public class Activity3D extends AppCompatActivity {
 
     private static final String TAG = Activity3D.class.getSimpleName();
+    private Session mSession = null;
+    // Set to true ensures requestInstall() triggers installation if necessary.
+    private boolean mUserRequestedInstall = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity3_d);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // ARCore requires camera permission to operate.
+        if (!CameraPermissionHelper.hasCameraPermission(this)) {
+            CameraPermissionHelper.requestCameraPermission(this);
+            return;
+        }
+
+        if (mSession == null) {
+            if (ArAvailability.isARInstalled(this)) {
+                try {
+                    mSession = new Session(this);
+                } catch (UnavailableArcoreNotInstalledException | UnavailableApkTooOldException | UnavailableSdkTooOldException | UnavailableDeviceNotCompatibleException e) {
+                    Log.e(TAG, "Exception: " + e.toString());
+                    e.printStackTrace();
+                    return;
+                }
+            } else {
+                return;
+            }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] results) {
+        if (!CameraPermissionHelper.hasCameraPermission(this)) {
+            Toast.makeText(this, R.string.Logging_camera_persmission, Toast.LENGTH_LONG)
+                    .show();
+            if (!CameraPermissionHelper.shouldShowRequestPermissionRationale(this)) {
+                // Permission denied with checking "Do not ask again".
+                CameraPermissionHelper.launchPermissionSettings(this);
+            }
+            finish();
+        }
     }
 
     /**
