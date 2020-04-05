@@ -6,7 +6,7 @@
 
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/imageButton4"
         android:layout_width="wrap_content"
         android:layout_height="91dp"
         android:layout_marginStart="80dp"
@@ -19,6 +19,7 @@
         app:srcCompat="@mipmap/icon_animals" />
 
     <ImageButton
+        android:id="@+id/imageButton6"
         android:layout_width="0dp"
         android:layout_height="72dp"
         android:layout_marginStart="80dp"
@@ -32,5 +33,32 @@
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/bear" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="0dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/button_cat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+        app:srcCompat="@mipmap/cat" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="0dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="80dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/Button_horse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton1"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton6"
+        app:srcCompat="@mipmap/horse" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,4 +8,6 @@
     <string name="button_bear">Oso</string>
     <string name="Logging_ARCore_error_not_installed">ARCore no esta installado. Esta funcionalidad no puede ser usada.</string>
     <string name="Logging_camera_permission">Los persmisos de la cámara son necesarios para lanzar la applicacion</string>
+    <string name="button_cat">Gato</string>
+    <string name="Button_horse">Caballo</string>
 </resources>
