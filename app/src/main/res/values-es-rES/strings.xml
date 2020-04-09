@@ -12,4 +12,6 @@
     <string name="button_horse">Caballo</string>
     <string name="button_dog">Perro</string>
     <string name="button_duck">Pato</string>
+    <string name="button_eagle">Aguila</string>
+    <string name="button_snake">Serpiente</string>
 </resources>

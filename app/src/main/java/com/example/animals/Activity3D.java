@@ -130,4 +130,26 @@ public class Activity3D extends AppCompatActivity {
                 "https://storage.googleapis.com/ar-answers-in-search-models/static/MallardDuck/model.glb",
                 "Duck");
     }
+
+    /**
+     * Called when the user taps the Snake button
+     */
+    public void show3DSnake(View view) {
+        Log.i(TAG, "Open 3D Snake");
+        ArCoreHelper.showArObject(
+                this,
+                "https://storage.googleapis.com/ar-answers-in-search-models/static/BallPython/model.glb",
+                "Snake");
+    }
+
+    /**
+     * Called when the user taps the Eagle button
+     */
+    public void show3DEagle(View view) {
+        Log.i(TAG, "Open 3D Eagle");
+        ArCoreHelper.showArObject(
+                this,
+                "https://storage.googleapis.com/ar-answers-in-search-models/static/GoldenEagle/model.glb",
+                "Eagle");
+    }
 }

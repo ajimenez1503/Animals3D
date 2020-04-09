@@ -7,7 +7,7 @@
 
     <ImageButton
         android:id="@+id/imageButton4"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="91dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="50dp"
@@ -23,7 +23,7 @@
         android:layout_width="107dp"
         android:layout_height="86dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="80dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_bear"
@@ -52,13 +52,13 @@
         android:layout_width="0dp"
         android:layout_height="91dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="80dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_horse"
         android:onClick="playHorseSounds"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/imageButton7"
         app:layout_constraintTop_toBottomOf="@+id/imageButton6"
         app:srcCompat="@mipmap/horse" />
@@ -91,5 +91,34 @@
         app:layout_constraintStart_toEndOf="@+id/imageButton11"
         app:layout_constraintTop_toBottomOf="@+id/imageButton8"
         app:srcCompat="@mipmap/duck" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="0dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/button_eagle"
+        android:onClick="playEagleSounds"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton11"
+        app:srcCompat="@mipmap/eagle" />
+
+    <ImageButton
+        android:id="@+id/imageButton13"
+        android:layout_width="0dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="80dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/button_snake"
+        android:onClick="playSnakeSounds"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton12"
+        app:srcCompat="@mipmap/snake" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

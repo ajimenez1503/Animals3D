@@ -93,5 +93,31 @@
         app:layout_constraintTop_toBottomOf="@+id/imageButton2"
         app:srcCompat="@mipmap/duck" />
 
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/button_eagle"
+        android:onClick="show3DEagle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton9"
+        app:srcCompat="@mipmap/eagle" />
+
+    <ImageButton
+        android:id="@+id/imageButton15"
+        android:layout_width="0dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/button_snake"
+        android:onClick="show3DSnake"
+        app:layout_constraintStart_toEndOf="@+id/imageButton14"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton10"
+        app:srcCompat="@mipmap/snake" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,4 +11,6 @@
     <string name="button_horse">Horse</string>
     <string name="button_dog">Dog</string>
     <string name="button_duck">Duck</string>
+    <string name="button_eagle">Eagle</string>
+    <string name="button_snake">Snake</string>
 </resources>
