@@ -9,9 +9,9 @@
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="wrap_content"
-        android:layout_height="91dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_tiger"
         android:onClick="show3DTiger"
@@ -21,24 +21,21 @@
 
     <ImageButton
         android:id="@+id/imageButton5"
-        android:layout_width="0dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="80dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_bear"
         android:onClick="show3DBear"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/bear" />
 
     <ImageButton
         android:id="@+id/imageButton1"
-        android:layout_width="0dp"
-        android:layout_height="91dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="60dp"
         android:background="@android:color/transparent"
@@ -50,52 +47,46 @@
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="0dp"
-        android:layout_height="91dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="80dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_horse"
         android:onClick="show3DHorse"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageButton1"
         app:layout_constraintTop_toBottomOf="@+id/imageButton5"
         app:srcCompat="@mipmap/horse" />
 
     <ImageButton
         android:id="@+id/imageButton9"
-        android:layout_width="0dp"
-        android:layout_height="91dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="60dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_dog"
         android:onClick="show3DDog"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton1"
         app:srcCompat="@mipmap/dog" />
 
     <ImageButton
         android:id="@+id/imageButton10"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="80dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_duck"
         android:onClick="show3DDuck"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton9"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2"
         app:srcCompat="@mipmap/duck" />
 
     <ImageButton
         android:id="@+id/imageButton14"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="60dp"
@@ -108,14 +99,14 @@
 
     <ImageButton
         android:id="@+id/imageButton15"
-        android:layout_width="0dp"
-        android:layout_height="91dp"
-        android:layout_marginStart="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:layout_marginEnd="80dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_snake"
         android:onClick="show3DSnake"
-        app:layout_constraintStart_toEndOf="@+id/imageButton14"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton10"
         app:srcCompat="@mipmap/snake" />
 
