@@ -26,8 +26,8 @@
             </intent-filter>
         </activity>
         <!--
- "AR Optional" app, contains non-AR features that can be used when
-     "Google Play Services for AR" (ARCore) is not available.
+            "AR Optional" app, contains non-AR features that can be used when
+            "Google Play Services for AR" (ARCore) is not available.
         -->
         <meta-data
             android:name="com.google.ar.core"
