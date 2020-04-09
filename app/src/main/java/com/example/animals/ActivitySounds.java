@@ -44,7 +44,7 @@ public class ActivitySounds extends AppCompatActivity {
     }
 
     /**
-     * Called when the user taps the Bear button
+     * Called when the user taps the Cat button
      */
     public void playCatSounds(View view) {
         Log.i(TAG, "Play Cat sounds");
@@ -52,10 +52,26 @@ public class ActivitySounds extends AppCompatActivity {
     }
 
     /**
-     * Called when the user taps the Bear button
+     * Called when the user taps the Horse button
      */
     public void playHorseSounds(View view) {
         Log.i(TAG, "Play Horse sounds");
         soundsHelper.play(this, R.raw.horse);
+    }
+
+    /**
+     * Called when the user taps the Dog button
+     */
+    public void playDogSounds(View view) {
+        Log.i(TAG, "Play Dog sounds");
+        soundsHelper.play(this, R.raw.dog);
+    }
+
+    /**
+     * Called when the user taps the Duck button
+     */
+    public void playDuckSounds(View view) {
+        Log.i(TAG, "Play Duck sounds");
+        soundsHelper.play(this, R.raw.duck);
     }
 }

@@ -88,7 +88,7 @@ public class Activity3D extends AppCompatActivity {
     }
 
     /**
-     * Called when the user taps the Bear button
+     * Called when the user taps the Cat button
      */
     public void show3DCat(View view) {
         Log.i(TAG, "Open 3D Cat");
@@ -99,7 +99,7 @@ public class Activity3D extends AppCompatActivity {
     }
 
     /**
-     * Called when the user taps the Bear button
+     * Called when the user taps the Horse button
      */
     public void show3DHorse(View view) {
         Log.i(TAG, "Open 3D Horse");
@@ -107,5 +107,27 @@ public class Activity3D extends AppCompatActivity {
                 this,
                 "https://storage.googleapis.com/ar-answers-in-search-models/static/ArabianHorse/model.glb",
                 "Horse");
+    }
+
+    /**
+     * Called when the user taps the Dog button
+     */
+    public void show3DDog(View view) {
+        Log.i(TAG, "Open 3D Dog");
+        ArCoreHelper.showArObject(
+                this,
+                "https://storage.googleapis.com/ar-answers-in-search-models/static/LabradorRetriever/model.glb",
+                "Dog");
+    }
+
+    /**
+     * Called when the user taps the Duck button
+     */
+    public void show3DDuck(View view) {
+        Log.i(TAG, "Open 3D Duck");
+        ArCoreHelper.showArObject(
+                this,
+                "https://storage.googleapis.com/ar-answers-in-search-models/static/MallardDuck/model.glb",
+                "Duck");
     }
 }
