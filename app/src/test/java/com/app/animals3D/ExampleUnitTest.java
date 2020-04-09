@@ -1,4 +1,4 @@
-package com.example.animals;
+package com.app.animals3D;
 
 import org.junit.Test;
 

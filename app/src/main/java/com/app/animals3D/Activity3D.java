@@ -1,4 +1,4 @@
-package com.example.animals;
+package com.app.animals3D;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -8,8 +8,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.animals.helper.ArCoreHelper;
-import com.example.animals.helper.CameraPermissionHelper;
+import com.app.animals3D.helper.ArCoreHelper;
+import com.app.animals3D.helper.CameraPermissionHelper;
 import com.google.ar.core.Session;
 import com.google.ar.core.exceptions.UnavailableApkTooOldException;
 import com.google.ar.core.exceptions.UnavailableArcoreNotInstalledException;

@@ -1,4 +1,4 @@
-package com.example.animals.helper;
+package com.app.animals3D.helper;
 
 import android.Manifest;
 import android.app.Activity;

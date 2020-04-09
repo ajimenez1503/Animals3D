@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Animales</string>
+    <string name="app_name">Animales 3D</string>
     <string name="text_welcome">Descubre los animales</string>
     <string name="button_sounds">Escucha los animales</string>
     <string name="button_see3D">Animales en 3D</string>

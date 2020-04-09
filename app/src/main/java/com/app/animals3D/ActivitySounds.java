@@ -1,4 +1,4 @@
-package com.example.animals;
+package com.app.animals3D;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -6,7 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.animals.helper.SoundsHelper;
+import com.app.animals3D.helper.SoundsHelper;
 
 public class ActivitySounds extends AppCompatActivity {
 

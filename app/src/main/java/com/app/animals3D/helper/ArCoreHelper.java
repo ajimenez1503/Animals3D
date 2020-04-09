@@ -1,4 +1,4 @@
-package com.example.animals.helper;
+package com.app.animals3D.helper;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,7 +7,7 @@ import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.example.animals.R;
+import com.app.animals3D.R;
 import com.google.ar.core.ArCoreApk;
 import com.google.ar.core.exceptions.UnavailableDeviceNotCompatibleException;
 import com.google.ar.core.exceptions.UnavailableUserDeclinedInstallationException;

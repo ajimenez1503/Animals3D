@@ -6,11 +6,11 @@ android {
     android.ndkVersion "21.0.6113669"
 
     defaultConfig {
-        applicationId "com.example.animals"
+        applicationId "com.app.animals3D"
         minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0"
+        versionName "0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

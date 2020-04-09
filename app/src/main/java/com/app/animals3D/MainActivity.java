@@ -1,4 +1,4 @@
-package com.example.animals;
+package com.app.animals3D;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.animals.helper.ArCoreHelper;
+import com.app.animals3D.helper.ArCoreHelper;
 
 public class MainActivity extends AppCompatActivity {
 
