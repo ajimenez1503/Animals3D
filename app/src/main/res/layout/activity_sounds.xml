@@ -1,114 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activity3D">
+    android:layout_height="match_parent">
+
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/imageButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="60dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_tiger"
-        android:onClick="show3DTiger"
+        android:onClick="playTigerSounds"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/icon_animals" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/imageButton6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="80dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_bear"
-        android:onClick="show3DBear"
+        android:onClick="playBearSounds"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/bear" />
 
     <ImageButton
-        android:id="@+id/imageButton1"
+        android:id="@+id/imageButton7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="60dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_cat"
-        android:onClick="show3DCat"
+        android:onClick="playCatSounds"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
         app:srcCompat="@mipmap/cat" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/imageButton8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="80dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_horse"
-        android:onClick="show3DHorse"
+        android:onClick="playHorseSounds"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton6"
         app:srcCompat="@mipmap/horse" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/imageButton11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="60dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_dog"
-        android:onClick="show3DDog"
+        android:onClick="playDogSounds"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton1"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton7"
         app:srcCompat="@mipmap/dog" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/imageButton12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="80dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_duck"
-        android:onClick="show3DDuck"
+        android:onClick="playDuckSounds"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton8"
         app:srcCompat="@mipmap/duck" />
 
     <ImageButton
-        android:id="@+id/imageButton14"
+        android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="60dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_eagle"
-        android:onClick="show3DEagle"
+        android:onClick="playEagleSounds"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton9"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton11"
         app:srcCompat="@mipmap/eagle" />
 
     <ImageButton
-        android:id="@+id/imageButton15"
+        android:id="@+id/imageButton13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="80dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/button_snake"
-        android:onClick="show3DSnake"
+        android:onClick="playSnakeSounds"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton10"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton12"
         app:srcCompat="@mipmap/snake" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
