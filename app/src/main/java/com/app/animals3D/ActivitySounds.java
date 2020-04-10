@@ -3,6 +3,7 @@ package com.app.animals3D;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,6 +32,8 @@ public class ActivitySounds extends AppCompatActivity {
      * Called when the user taps the Tiger button
      */
     public void playTigerSounds(View view) {
+        ImageButton button = (ImageButton) view;
+        button.setImageAlpha(255);
         Log.i(TAG, "Play Tiger sounds");
         soundsHelper.play(this, R.raw.tiger);
     }
@@ -39,6 +42,8 @@ public class ActivitySounds extends AppCompatActivity {
      * Called when the user taps the Bear button
      */
     public void playBearSounds(View view) {
+        ImageButton button = (ImageButton) view;
+        button.setImageAlpha(150);
         Log.i(TAG, "Play Bear sounds");
         soundsHelper.play(this, R.raw.bear);
     }
