@@ -33,7 +33,6 @@ public class ActivitySounds extends AppCompatActivity {
      */
     public void playTigerSounds(View view) {
         ImageButton button = (ImageButton) view;
-        button.setImageAlpha(255);
         Log.i(TAG, "Play Tiger sounds");
         soundsHelper.play(this, R.raw.tiger);
     }
@@ -43,7 +42,6 @@ public class ActivitySounds extends AppCompatActivity {
      */
     public void playBearSounds(View view) {
         ImageButton button = (ImageButton) view;
-        button.setImageAlpha(150);
         Log.i(TAG, "Play Bear sounds");
         soundsHelper.play(this, R.raw.bear);
     }

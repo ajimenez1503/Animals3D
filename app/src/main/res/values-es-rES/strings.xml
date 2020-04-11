@@ -14,4 +14,5 @@
     <string name="button_duck">Pato</string>
     <string name="button_eagle">Aguila</string>
     <string name="button_snake">Serpiente</string>
+    <string name="button_animal">animal</string>
 </resources>

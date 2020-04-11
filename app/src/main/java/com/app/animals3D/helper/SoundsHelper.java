@@ -4,6 +4,7 @@ import android.content.Context;
 import android.media.MediaPlayer;
 import android.util.Log;
 
+//TODO: make this class singleton and access from ActivitySounds and animalsAdapter
 public class SoundsHelper {
     private MediaPlayer mp;
 

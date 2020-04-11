@@ -13,4 +13,5 @@
     <string name="button_duck">Duck</string>
     <string name="button_eagle">Eagle</string>
     <string name="button_snake">Snake</string>
+    <string name="button_animal">animal</string>
 </resources>
