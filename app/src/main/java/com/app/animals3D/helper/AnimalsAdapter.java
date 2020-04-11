@@ -11,10 +11,10 @@ import android.widget.ImageButton;
 import com.app.animals3D.R;
 
 public class AnimalsAdapter extends BaseAdapter {
-    private Context context;
-    private Animal[] items;
-    private onClickAction action;
-    private LayoutInflater inflater;
+    private final Context context;
+    private final Animal[] items;
+    private final onClickAction action;
+    private final LayoutInflater inflater;
 
     public AnimalsAdapter(Context context, Animal[] items, onClickAction action) {
         this.context = context;
@@ -46,7 +46,7 @@ public class AnimalsAdapter extends BaseAdapter {
         }
 
         final Animal animal = getItem(position);
-        ImageButton buttonAnimal = view.findViewById(R.id.imagen_animal);
+        ImageButton buttonAnimal = view.findViewById(R.id.imageButton_animal);
         buttonAnimal.setImageResource(animal.getIdDrawable());
         if (action == onClickAction.OBJECT3D) {
             buttonAnimal.setOnClickListener(new View.OnClickListener() {

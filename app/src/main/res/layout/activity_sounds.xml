@@ -84,7 +84,6 @@
         app:srcCompat="@mipmap/duck" />
 
     <ImageButton
-        android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -97,7 +96,6 @@
         app:srcCompat="@mipmap/eagle" />
 
     <ImageButton
-        android:id="@+id/imageButton13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"

@@ -3,7 +3,7 @@ package com.app.animals3D.helper;
 import com.app.animals3D.R;
 
 public class Animal {
-    public static Animal[] list_of_animals = {
+    public static final Animal[] list_of_animals = {
             new Animal("Tiger", R.mipmap.icon_animals, "https://storage.googleapis.com/ar-answers-in-search-models/static/Tiger/model.glb", R.raw.tiger),
             new Animal("Bear", R.mipmap.bear, "https://storage.googleapis.com/ar-answers-in-search-models/static/BrownBear/model.glb", R.raw.bear),
             new Animal("Cat", R.mipmap.cat, "https://storage.googleapis.com/ar-answers-in-search-models/static/ShortHairedCat/model.glb", R.raw.cat),
@@ -26,20 +26,20 @@ public class Animal {
             new Animal("Hedgehog", R.mipmap.hedgehog, "https://storage.googleapis.com/ar-answers-in-search-models/static/EuropeanHedgehog/model.glb"),
             new Animal("Crocodile", R.mipmap.crocodile, "https://storage.googleapis.com/ar-answers-in-search-models/static/Alligator/model.glb")
     };
-    private String name;
-    private int idDrawable;
-    private String source3D;
-    private int idSound;
+    private final String name;
+    private final int idDrawable;
+    private final String source3D;
+    private final int idSound;
     private String spanishName;
 
-    public Animal(String name, int idDrawable, String source3D, int idSound) {
+    private Animal(String name, int idDrawable, String source3D, int idSound) {
         this.name = name;
         this.idDrawable = idDrawable;
         this.source3D = source3D;
         this.idSound = idSound;
     }
 
-    public Animal(String name, int idDrawable, String source3D) {
+    private Animal(String name, int idDrawable, String source3D) {
         this.name = name;
         this.idDrawable = idDrawable;
         this.source3D = source3D;
