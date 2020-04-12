@@ -29,6 +29,6 @@ public class ActivitySounds extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         Log.i(TAG, "Stop sounds");
-        SoundsHelper.getInstance().getInstance().stop();
+        SoundsHelper.getInstance().stop();
     }
 }
