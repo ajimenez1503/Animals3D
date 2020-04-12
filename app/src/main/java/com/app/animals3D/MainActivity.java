@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Called when the user taps the 3D button
      */
+    @SuppressWarnings("unused")
     public void open3DActivity(View view) {
         if (ArCoreHelper.isArCoreSupported(this)) {
             Intent intent = new Intent(this, Activity3D.class);
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Called when the user taps the Sounds button
      */
+    @SuppressWarnings("unused")
     public void openSoundsActivity(View view) {
         Intent intent = new Intent(this, ActivitySounds.class);
         startActivity(intent);

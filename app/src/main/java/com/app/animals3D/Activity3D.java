@@ -8,7 +8,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.app.animals3D.helper.Animal;
 import com.app.animals3D.helper.AnimalsAdapter;
 import com.app.animals3D.helper.ArCoreHelper;
 import com.app.animals3D.helper.CameraPermissionHelper;
@@ -30,7 +29,7 @@ public class Activity3D extends AppCompatActivity {
         setContentView(R.layout.activity_animals);
 
         GridView gridView = this.findViewById(R.id.gridView1);
-        AnimalsAdapter gridAdapter = new AnimalsAdapter(Activity3D.this, Animal.list_of_animals, onClickAction.OBJECT3D);
+        AnimalsAdapter gridAdapter = new AnimalsAdapter(Activity3D.this, onClickAction.OBJECT3D);
         gridView.setAdapter(gridAdapter);
     }
 

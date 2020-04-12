@@ -6,7 +6,6 @@ import android.widget.GridView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.app.animals3D.helper.Animal;
 import com.app.animals3D.helper.AnimalsAdapter;
 import com.app.animals3D.helper.SoundsHelper;
 import com.app.animals3D.helper.onClickAction;
@@ -21,7 +20,7 @@ public class ActivitySounds extends AppCompatActivity {
         setContentView(R.layout.activity_animals);
 
         GridView gridView = this.findViewById(R.id.gridView1);
-        AnimalsAdapter gridAdapter = new AnimalsAdapter(ActivitySounds.this, Animal.list_of_animals, onClickAction.SOUND);
+        AnimalsAdapter gridAdapter = new AnimalsAdapter(ActivitySounds.this, onClickAction.SOUND);
         gridView.setAdapter(gridAdapter);
     }
 
