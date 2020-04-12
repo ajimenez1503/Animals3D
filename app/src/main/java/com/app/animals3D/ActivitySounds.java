@@ -18,7 +18,7 @@ public class ActivitySounds extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_3d);
+        setContentView(R.layout.activity_animals);
 
         GridView gridView = this.findViewById(R.id.gridView1);
         AnimalsAdapter gridAdapter = new AnimalsAdapter(ActivitySounds.this, Animal.list_of_animals, onClickAction.SOUND);

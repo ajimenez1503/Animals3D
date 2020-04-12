@@ -27,7 +27,7 @@ public class Activity3D extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_3d);
+        setContentView(R.layout.activity_animals);
 
         GridView gridView = this.findViewById(R.id.gridView1);
         AnimalsAdapter gridAdapter = new AnimalsAdapter(Activity3D.this, Animal.list_of_animals, onClickAction.OBJECT3D);
