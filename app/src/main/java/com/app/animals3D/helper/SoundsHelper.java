@@ -6,10 +6,20 @@ import android.util.Log;
 
 //TODO: make this class singleton and access from ActivitySounds and animalsAdapter
 public class SoundsHelper {
+    // static variable single_instance of type Singleton
+    private static SoundsHelper single_instance = null;
     private MediaPlayer mp;
 
     public SoundsHelper() {
         mp = new MediaPlayer();
+    }
+
+    // static method to create instance of Singleton class
+    public static SoundsHelper getInstance() {
+        if (single_instance == null)
+            single_instance = new SoundsHelper();
+
+        return single_instance;
     }
 
     public void stop() {

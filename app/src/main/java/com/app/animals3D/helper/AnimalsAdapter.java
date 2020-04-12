@@ -51,13 +51,21 @@ public class AnimalsAdapter extends BaseAdapter {
         if (action == onClickAction.OBJECT3D) {
             buttonAnimal.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Log.i(context.getPackageName(), "Open 3D " + animal.getName());
+                    Log.i(context.getClass().getSimpleName(), "Open 3D " + animal.getName());
                     ArCoreHelper.showArObject(
                             context,
                             animal.getSource3D(),
                             animal.getName());
                 }
             });
+        } else if (action == onClickAction.SOUND) {
+            buttonAnimal.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Log.i(context.getClass().getSimpleName(), "Play " + animal.getName() + " sounds");
+                    SoundsHelper.getInstance().play(context, animal.getIdSound());
+                }
+            });
+
         }
 
         return view;
