@@ -18,26 +18,43 @@
             android:text="@string/text_welcome"
             android:textSize="36sp" />
 
-
-        <Button
-            android:id="@+id/button1"
+        <TableLayout
+            android:id="@+id/linearLayout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView1"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="100dp"
-            android:onClick="openSoundsActivity"
-            android:text="@string/button_sounds" />
+            android:layout_centerVertical="true">
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/button1"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="100dp"
-            android:onClick="open3DActivity"
-            android:text="@string/button_see3D" />
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp">
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="openSoundsActivity"
+                    android:text="@string/button_sounds" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp">
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:onClick="open3DActivity"
+                    android:text="@string/button_see3D" />
+            </TableRow>
+        </TableLayout>
+
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
