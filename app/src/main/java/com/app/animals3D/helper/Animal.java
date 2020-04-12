@@ -20,7 +20,7 @@ public class Animal {
             new Animal("Penguin", R.mipmap.penguin, "https://storage.googleapis.com/ar-answers-in-search-models/static/EmperorPenguin/model.glb"),
             new Animal("Shark", R.mipmap.shark, "https://storage.googleapis.com/ar-answers-in-search-models/static/GreatWhiteShark/model.glb"),
             new Animal("Sheep", R.mipmap.sheep, "https://storage.googleapis.com/ar-answers-in-search-models/static/AlpineGoat/model.glb"),
-            new Animal("Snake", R.mipmap.snake, "https://storage.googleapis.com/ar-answers-in-search-models/static/BallPython/model.glb"),
+            new Animal("Snake", R.mipmap.snake, "https://storage.googleapis.com/ar-answers-in-search-models/static/BallPython/model.glb", R.raw.snake),
             new Animal("Turtle", R.mipmap.turtle, "https://storage.googleapis.com/ar-answers-in-search-models/static/GreenSeaTurtle/model.glb"),
             new Animal("Wolf", R.mipmap.wolf, "https://storage.googleapis.com/ar-answers-in-search-models/static/TimberWolf/model.glb"),
             new Animal("Hedgehog", R.mipmap.hedgehog, "https://storage.googleapis.com/ar-answers-in-search-models/static/EuropeanHedgehog/model.glb"),
@@ -30,7 +30,6 @@ public class Animal {
     private final int idDrawable;
     private final String source3D;
     private final int idSound;
-    private String spanishName;
 
     private Animal(String name, int idDrawable, String source3D, int idSound) {
         this.name = name;
@@ -50,24 +49,20 @@ public class Animal {
         return name;
     }
 
-    public int getIdDrawable() {
+    int getIdDrawable() {
         return idDrawable;
     }
 
-    public String getSource3D() {
+    String getSource3D() {
         return source3D;
     }
 
-    public int getIdSound() {
+    int getIdSound() {
         return idSound;
-    }
-
-    public String getSpanishName() {
-        return spanishName;
     }
 
     @Override
     public int hashCode() {
-        return name.hashCode() + idDrawable + source3D.hashCode() + idSound + spanishName.hashCode();
+        return name.hashCode() + idDrawable + source3D.hashCode() + idSound;
     }
 }

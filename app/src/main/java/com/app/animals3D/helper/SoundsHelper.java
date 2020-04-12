@@ -9,7 +9,7 @@ public class SoundsHelper {
     private static SoundsHelper single_instance = null;
     private MediaPlayer mp;
 
-    public SoundsHelper() {
+    private SoundsHelper() {
         mp = new MediaPlayer();
     }
 
@@ -35,7 +35,7 @@ public class SoundsHelper {
         mp = MediaPlayer.create(context, soundId);
     }
 
-    public void play(Context context, int soundId) {
+    void play(Context context, int soundId) {
         try {
             stop();
             create(context, soundId);

@@ -4,15 +4,7 @@
     <string name="text_welcome">Descubre los animales</string>
     <string name="button_sounds">Escucha los animales</string>
     <string name="button_see3D">Animales en 3D</string>
-    <string name="button_tiger">Tigre</string>
-    <string name="button_bear">Oso</string>
     <string name="Logging_ARCore_error_not_installed">ARCore no esta installado. Esta funcionalidad no puede ser usada.</string>
     <string name="Logging_camera_permission">Los persmisos de la cámara son necesarios para lanzar la applicacion</string>
-    <string name="button_cat">Gato</string>
-    <string name="button_horse">Caballo</string>
-    <string name="button_dog">Perro</string>
-    <string name="button_duck">Pato</string>
-    <string name="button_eagle">Aguila</string>
-    <string name="button_snake">Serpiente</string>
     <string name="button_animal">animal</string>
 </resources>
