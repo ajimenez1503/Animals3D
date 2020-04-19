@@ -5,9 +5,28 @@
     android:layout_height="match_parent"
     tools:context=".Activity3D">
 
-    <GridView
-        android:id="@+id/gridView1"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:numColumns="auto_fit" />
+        android:layout_height="match_parent">
+
+        <GridView
+            android:id="@+id/gridView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/adView2"
+            android:layout_margin="5dp"
+            android:numColumns="auto_fit"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarStyle="insideOverlay"
+            android:stretchMode="columnWidth" />
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/animals_banner_ad_unit_id" />
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

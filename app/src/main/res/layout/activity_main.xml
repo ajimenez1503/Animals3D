@@ -19,7 +19,7 @@
             android:textSize="36sp" />
 
         <TableLayout
-            android:id="@+id/linearLayout1"
+            android:id="@+id/tableLayout1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView1"
@@ -53,6 +53,15 @@
                     android:text="@string/button_see3D" />
             </TableRow>
         </TableLayout>
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/main_banner_ad_unit_id" />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
