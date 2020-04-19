@@ -1,16 +1,11 @@
-<resources>
-    <string name="app_name">Animals 3D</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="MissingTranslation">Animals 3D</string>
     <string name="text_welcome">Discover the animals</string>
     <string name="button_sounds">Hear the animals</string>
     <string name="button_see3D">3D Animals</string>
-    <string name="button_tiger">Tiger</string>
-    <string name="button_bear">Bear</string>
     <string name="Logging_ARCore_error_not_installed">ARCore not installed. This functionality can not be used.</string>
     <string name="Logging_camera_permission">Camera permission is needed to run this application</string>
-    <string name="button_cat">Cat</string>
-    <string name="button_horse">Horse</string>
-    <string name="button_dog">Dog</string>
-    <string name="button_duck">Duck</string>
-    <string name="button_eagle">Eagle</string>
-    <string name="button_snake">Snake</string>
+    <string name="button_animal">animal</string>
+    <string name="main_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="animals_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 </resources>

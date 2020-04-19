@@ -9,8 +9,8 @@ android {
         applicationId "com.app.animals3D"
         minSdkVersion 24
         targetSdkVersion 29
-        versionCode 1
-        versionName "0.0"
+        versionCode 2
+        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -19,6 +19,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    allprojects {
+        repositories {
+            google()
         }
     }
 
@@ -33,4 +39,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.google.ar:core:1.16.0'
     implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-ads:19.1.0'
 }

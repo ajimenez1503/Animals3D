@@ -5,10 +5,20 @@ import android.media.MediaPlayer;
 import android.util.Log;
 
 public class SoundsHelper {
+    // static variable single_instance of type Singleton
+    private static SoundsHelper single_instance = null;
     private MediaPlayer mp;
 
-    public SoundsHelper() {
+    private SoundsHelper() {
         mp = new MediaPlayer();
+    }
+
+    // static method to create instance of Singleton class
+    public static SoundsHelper getInstance() {
+        if (single_instance == null)
+            single_instance = new SoundsHelper();
+
+        return single_instance;
     }
 
     public void stop() {
@@ -17,13 +27,15 @@ public class SoundsHelper {
         }
         mp.reset();
         mp.release();
+        // Reset singleton instance
+        single_instance = null;
     }
 
     private void create(Context context, int soundId) {
         mp = MediaPlayer.create(context, soundId);
     }
 
-    public void play(Context context, int soundId) {
+    void play(Context context, int soundId) {
         try {
             stop();
             create(context, soundId);

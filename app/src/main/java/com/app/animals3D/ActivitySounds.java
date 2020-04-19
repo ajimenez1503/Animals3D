@@ -2,92 +2,83 @@ package com.app.animals3D;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
+import android.widget.GridView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.app.animals3D.helper.AnimalsAdapter;
 import com.app.animals3D.helper.SoundsHelper;
+import com.app.animals3D.helper.onClickAction;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class ActivitySounds extends AppCompatActivity {
 
     private static final String TAG = ActivitySounds.class.getSimpleName();
-    private SoundsHelper soundsHelper = null;
+    private AdView mAdView = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sounds);
-        soundsHelper = new SoundsHelper();
+        setContentView(R.layout.activity_animals);
+
+        GridView gridView = this.findViewById(R.id.gridView1);
+        AnimalsAdapter gridAdapter = new AnimalsAdapter(ActivitySounds.this, onClickAction.SOUND);
+        gridView.setAdapter(gridAdapter);
+
+        // Initialize the Mobile Ads SDK.
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        mAdView = findViewById(R.id.adView2);
+        // Create an ad request.
+        AdRequest adRequest = new AdRequest.Builder().build();
+        // Start loading the ad in the background.
+        mAdView.loadAd(adRequest);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         Log.i(TAG, "Stop sounds");
-        soundsHelper.stop();
+        SoundsHelper.getInstance().stop();
     }
 
     /**
-     * Called when the user taps the Tiger button
+     * Called when leaving the activity
      */
-    public void playTigerSounds(View view) {
-        Log.i(TAG, "Play Tiger sounds");
-        soundsHelper.play(this, R.raw.tiger);
+    @Override
+    public void onPause() {
+        if (mAdView != null) {
+            mAdView.pause();
+        }
+        super.onPause();
     }
 
     /**
-     * Called when the user taps the Bear button
+     * Called when returning to the activity
      */
-    public void playBearSounds(View view) {
-        Log.i(TAG, "Play Bear sounds");
-        soundsHelper.play(this, R.raw.bear);
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
     }
 
     /**
-     * Called when the user taps the Cat button
+     * Called before the activity is destroyed
      */
-    public void playCatSounds(View view) {
-        Log.i(TAG, "Play Cat sounds");
-        soundsHelper.play(this, R.raw.cat);
-    }
-
-    /**
-     * Called when the user taps the Horse button
-     */
-    public void playHorseSounds(View view) {
-        Log.i(TAG, "Play Horse sounds");
-        soundsHelper.play(this, R.raw.horse);
-    }
-
-    /**
-     * Called when the user taps the Dog button
-     */
-    public void playDogSounds(View view) {
-        Log.i(TAG, "Play Dog sounds");
-        soundsHelper.play(this, R.raw.dog);
-    }
-
-    /**
-     * Called when the user taps the Duck button
-     */
-    public void playDuckSounds(View view) {
-        Log.i(TAG, "Play Duck sounds");
-        soundsHelper.play(this, R.raw.duck);
-    }
-
-    /**
-     * Called when the user taps the Eagle button
-     */
-    public void playEagleSounds(View view) {
-        Log.i(TAG, "Play Eagle sounds");
-        soundsHelper.play(this, R.raw.eagle);
-    }
-
-    /**
-     * Called when the user taps the Snake button
-     */
-    public void playSnakeSounds(View view) {
-        Log.i(TAG, "Play Snake sounds");
-        soundsHelper.play(this, R.raw.snake);
+    @Override
+    public void onDestroy() {
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
+        super.onDestroy();
     }
 }

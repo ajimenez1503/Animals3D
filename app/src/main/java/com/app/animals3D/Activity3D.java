@@ -2,14 +2,21 @@ package com.app.animals3D;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
+import android.widget.GridView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.app.animals3D.helper.AnimalsAdapter;
 import com.app.animals3D.helper.ArCoreHelper;
 import com.app.animals3D.helper.CameraPermissionHelper;
+import com.app.animals3D.helper.onClickAction;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.ar.core.Session;
 import com.google.ar.core.exceptions.UnavailableApkTooOldException;
 import com.google.ar.core.exceptions.UnavailableArcoreNotInstalledException;
@@ -20,11 +27,28 @@ public class Activity3D extends AppCompatActivity {
 
     private static final String TAG = Activity3D.class.getSimpleName();
     private Session mSession = null;
+    private AdView mAdView = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity3_d);
+        setContentView(R.layout.activity_animals);
+
+        GridView gridView = this.findViewById(R.id.gridView1);
+        AnimalsAdapter gridAdapter = new AnimalsAdapter(Activity3D.this, onClickAction.OBJECT3D);
+        gridView.setAdapter(gridAdapter);
+
+        // Initialize the Mobile Ads SDK.
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        mAdView = findViewById(R.id.adView2);
+        // Create an ad request.
+        AdRequest adRequest = new AdRequest.Builder().build();
+        // Start loading the ad in the background.
+        mAdView.loadAd(adRequest);
     }
 
     @Override
@@ -50,6 +74,10 @@ public class Activity3D extends AppCompatActivity {
                 }
             }
         }
+
+        if (mAdView != null) {
+            mAdView.resume();
+        }
     }
 
     @Override
@@ -65,91 +93,25 @@ public class Activity3D extends AppCompatActivity {
     }
 
     /**
-     * Called when the user taps the Tiger button
+     * Called when leaving the activity
      */
-    public void show3DTiger(View view) {
-        Log.i(TAG, "Open 3D Tiger");
-        ArCoreHelper.showArObject(
-                this,
-                "https://storage.googleapis.com/ar-answers-in-search-models/static/Tiger/model.glb",
-                "Tiger");
-
+    @Override
+    public void onPause() {
+        if (mAdView != null) {
+            mAdView.pause();
+        }
+        super.onPause();
     }
 
-    /**
-     * Called when the user taps the Bear button
-     */
-    public void show3DBear(View view) {
-        Log.i(TAG, "Open 3D Bear");
-        ArCoreHelper.showArObject(
-                this,
-                "https://storage.googleapis.com/ar-answers-in-search-models/static/BrownBear/model.glb",
-                "Bear");
-    }
 
     /**
-     * Called when the user taps the Cat button
+     * Called before the activity is destroyed
      */
-    public void show3DCat(View view) {
-        Log.i(TAG, "Open 3D Cat");
-        ArCoreHelper.showArObject(
-                this,
-                "https://storage.googleapis.com/ar-answers-in-search-models/static/ShortHairedCat/model.glb",
-                "Cat");
-    }
-
-    /**
-     * Called when the user taps the Horse button
-     */
-    public void show3DHorse(View view) {
-        Log.i(TAG, "Open 3D Horse");
-        ArCoreHelper.showArObject(
-                this,
-                "https://storage.googleapis.com/ar-answers-in-search-models/static/ArabianHorse/model.glb",
-                "Horse");
-    }
-
-    /**
-     * Called when the user taps the Dog button
-     */
-    public void show3DDog(View view) {
-        Log.i(TAG, "Open 3D Dog");
-        ArCoreHelper.showArObject(
-                this,
-                "https://storage.googleapis.com/ar-answers-in-search-models/static/LabradorRetriever/model.glb",
-                "Dog");
-    }
-
-    /**
-     * Called when the user taps the Duck button
-     */
-    public void show3DDuck(View view) {
-        Log.i(TAG, "Open 3D Duck");
-        ArCoreHelper.showArObject(
-                this,
-                "https://storage.googleapis.com/ar-answers-in-search-models/static/MallardDuck/model.glb",
-                "Duck");
-    }
-
-    /**
-     * Called when the user taps the Snake button
-     */
-    public void show3DSnake(View view) {
-        Log.i(TAG, "Open 3D Snake");
-        ArCoreHelper.showArObject(
-                this,
-                "https://storage.googleapis.com/ar-answers-in-search-models/static/BallPython/model.glb",
-                "Snake");
-    }
-
-    /**
-     * Called when the user taps the Eagle button
-     */
-    public void show3DEagle(View view) {
-        Log.i(TAG, "Open 3D Eagle");
-        ArCoreHelper.showArObject(
-                this,
-                "https://storage.googleapis.com/ar-answers-in-search-models/static/GoldenEagle/model.glb",
-                "Eagle");
+    @Override
+    public void onDestroy() {
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
+        super.onDestroy();
     }
 }
