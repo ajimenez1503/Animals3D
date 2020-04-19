@@ -2,3 +2,6 @@
 
 # Animals
 Simple 3D and sounds animals app
+
+# Google Play
+https://play.google.com/store/apps/details?id=com.app.animals3D
