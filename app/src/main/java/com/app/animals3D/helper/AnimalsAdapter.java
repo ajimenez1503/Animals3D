@@ -24,10 +24,26 @@ public class AnimalsAdapter extends BaseAdapter {
         this.action = action;
         inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         items = listAnimals;
-        // TODO filter animal if they do not have sounds or 3D (depending of the activity)
+        // Filter animal if they do not have sounds or 3D (depending of the activity)
+        filterListAnimals();
         // Shuffle element in order to have a different order every time.
         Collections.shuffle(items);
 
+    }
+
+    /* filter animals depending in the sounds and 3D resource */
+    private void filterListAnimals() {
+        for (Animal animal : items) {
+            if (action == onClickAction.OBJECT3D) {
+                if (animal.getSource3D() == null) {
+                    items.remove(animal);
+                }
+            } else if (action == onClickAction.SOUND) {
+                if (animal.getIdSound() == -1) {
+                    items.remove(animal);
+                }
+            }
+        }
     }
 
     @Override
