@@ -22,10 +22,6 @@ public class Animal {
         this.name.put(LocalLocale.SPANISH.getDisplayLanguage(), spanishName);
     }
 
-    public void addName(String language, String name) {
-        this.name.put(language, name);
-    }
-
     public String getName() {
         if (name.containsKey(Locale.getDefault().getDisplayLanguage())) {
             return name.get(Locale.getDefault().getDisplayLanguage());
