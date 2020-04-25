@@ -13,12 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.app.animals3D.ActivitySounds"
-            android:parentActivityName="com.app.animals3D.MainActivity" />
+            android:name=".ActivityQuiz"
+            android:parentActivityName=".MainActivity"></activity>
         <activity
-            android:name="com.app.animals3D.Activity3D"
-            android:parentActivityName="com.app.animals3D.MainActivity" />
-        <activity android:name="com.app.animals3D.MainActivity">
+            android:name=".ActivitySounds"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Activity3D"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,7 +36,7 @@
             android:name="com.google.ar.core"
             android:value="optional" />
 
-        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <!-- Sample AdMob App ID -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-8303761704769767~7687877317" />

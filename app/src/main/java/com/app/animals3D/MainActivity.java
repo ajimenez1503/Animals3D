@@ -56,6 +56,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Called when the user taps the quiz button
+     */
+    @SuppressWarnings("unused")
+    public void openQuizActivity(View view) {
+        Intent intent = new Intent(this, ActivityQuiz.class);
+        startActivity(intent);
+    }
+
+    /**
      * Called when leaving the activity
      */
     @Override

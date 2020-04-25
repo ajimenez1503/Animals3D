@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:text="@string/text_welcome"
             android:textSize="36sp" />
 
@@ -28,7 +28,7 @@
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp">
+                android:layout_marginTop="30dp">
 
                 <Button
                     android:id="@+id/button1"
@@ -51,6 +51,20 @@
 
                     android:onClick="open3DActivity"
                     android:text="@string/button_see3D" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:onClick="openQuizActivity"
+                    android:text="@string/button_quiz" />
             </TableRow>
         </TableLayout>
 

@@ -9,4 +9,7 @@
     <string name="button_animal">animal</string>
     <string name="animals_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="main_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="button_quiz">Preguntas</string>
+    <string name="correct_answer">Correcto</string>
+    <string name="incorrect_answer">Incorrecto</string>
 </resources>
