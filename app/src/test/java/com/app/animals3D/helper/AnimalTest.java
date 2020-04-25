@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Locale;
+
 import static org.junit.Assert.assertEquals;
 
 public class AnimalTest {
@@ -13,7 +15,7 @@ public class AnimalTest {
     @Before
     public void setUp() {
         System.out.println("Start unit test animal");
-        animal = new Animal("TestName", 1, "TestResource", 2);
+        animal = new Animal("TestName", 1, "TestResource", 2, "TestNameSpanish");
 
     }
 
@@ -23,8 +25,13 @@ public class AnimalTest {
     }
 
     @Test
-    public void testGetName() {
-        assertEquals("TestName", animal.getName());
+    public void testGetNameEnglish() {
+        assertEquals("TestName", animal.getName(Locale.ENGLISH.getDisplayLanguage()));
+    }
+
+    @Test
+    public void testGetNameSpanish() {
+        assertEquals("TestName", animal.getName(LocalLocale.SPANISH.getDisplayLanguage()));
     }
 
     @Test
@@ -44,7 +51,7 @@ public class AnimalTest {
 
     @Test
     public void testHashCode() {
-        assertEquals(animal.getName().hashCode() + animal.getIdDrawable() + animal.getSource3D().hashCode() + animal.getIdSound(), animal.hashCode());
+        assertEquals(animal.getNameMap().hashCode() + animal.getIdDrawable() + animal.getSource3D().hashCode() + animal.getIdSound(), animal.hashCode());
     }
 
     @Test

@@ -24,6 +24,7 @@ public class AnimalsAdapter extends BaseAdapter {
         this.action = action;
         inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         items = listAnimals;
+        // TODO filter animal if they do not have sounds or 3D (depending of the activity)
         // Shuffle element in order to have a different order every time.
         Collections.shuffle(items);
 
