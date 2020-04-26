@@ -12,4 +12,8 @@
     <string name="button_quiz">Preguntas</string>
     <string name="correct_answer">Correcto</string>
     <string name="incorrect_answer">Incorrecto</string>
+    <string-array name="languages">
+        <item>español</item>
+        <item>inglés</item>
+    </string-array>
 </resources>

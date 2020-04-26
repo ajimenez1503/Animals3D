@@ -2,8 +2,10 @@ package com.app.animals3D.helper;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +20,7 @@ public class Quiz {
     private final ArrayList<Animal> listAnimals;
     private final TextView textView;
     private final TextView textViewScore;
+    private final Spinner spinnerLanguage;
     private final Random rand;
     private final Activity activity;
     private int score;
@@ -36,6 +39,8 @@ public class Quiz {
         listOptions.add((ImageButton) activity.findViewById(R.id.quiz_imageButton_animal2));
         listOptions.add((ImageButton) activity.findViewById(R.id.quiz_imageButton_animal3));
         listOptions.add((ImageButton) activity.findViewById(R.id.quiz_imageButton_animal4));
+
+        spinnerLanguage = activity.findViewById(R.id.spinner_quiz_language);
 
         this.listAnimals = ListAnimals.getInstance().get();
         Collections.shuffle(this.listAnimals);
@@ -57,7 +62,7 @@ public class Quiz {
             counter++;
         }
 
-        textView.setText(listAnimals.get(counter).getName());
+        setQuestion();
 
         // Set options
         ArrayList<Integer> choosenAnimalIndex = new ArrayList<>(4);
@@ -86,6 +91,13 @@ public class Quiz {
                 }
             });
         }
+    }
+
+    public void setQuestion() {
+        Log.i(activity.getClass().getSimpleName(), "spinner" + spinnerLanguage.getSelectedItem().toString());
+        String language = spinnerLanguage.getSelectedItem().toString();
+        String animal = listAnimals.get(counter).getName(language);
+        textView.setText(animal);
     }
 
     private void answer(int text) {
