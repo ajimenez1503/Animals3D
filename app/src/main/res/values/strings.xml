@@ -10,8 +10,8 @@
     <string name="animals_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="quiz_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="button_quiz">Quiz</string>
-    <string name="correct_answer">Correct</string>
-    <string name="incorrect_answer">Incorrect</string>
+    <string name="correct_answer">Correct!</string>
+    <string name="incorrect_answer">Incorrect!</string>
     <string-array name="languages">
         <item>English</item>
         <item>Spanish</item>

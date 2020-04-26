@@ -2,7 +2,7 @@ package com.app.animals3D.helper;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Spinner;
@@ -22,12 +22,15 @@ public class Quiz {
     private final TextView textViewScore;
     private final Spinner spinnerLanguage;
     private final Random rand;
-    private final Activity activity;
-    private int score;
+    private final Toast toast;
+    private int correctAnswer;
+    private int incorrectAnswer;
     private int counter;
 
+    @SuppressLint("ShowToast")
     public Quiz(Activity activity) {
-        this.score = 0;
+        this.correctAnswer = 0;
+        this.incorrectAnswer = 0;
         this.counter = -1;
 
         textView = activity.findViewById(R.id.textView2);
@@ -45,8 +48,10 @@ public class Quiz {
         this.listAnimals = ListAnimals.getInstance().get();
         Collections.shuffle(this.listAnimals);
 
-        this.activity = activity;
         rand = new Random();
+
+        toast = Toast.makeText(activity, "", Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER, 0, 150);
     }
 
     public void start() {
@@ -94,25 +99,29 @@ public class Quiz {
     }
 
     public void setQuestion() {
-        Log.i(activity.getClass().getSimpleName(), "spinner" + spinnerLanguage.getSelectedItem().toString());
         String language = spinnerLanguage.getSelectedItem().toString();
         String animal = listAnimals.get(counter).getName(language);
         textView.setText(animal);
     }
 
     private void answer(int text) {
-        Toast.makeText(activity, text, Toast.LENGTH_SHORT).show();
+        toast.setText(text);
         if (text == R.string.correct_answer) {
-            score++;
+            correctAnswer++;
             updateScore();
+            toast.getView().setBackgroundColor(0xFF8BC34A);
+        } else {
+            incorrectAnswer++;
+            toast.getView().setBackgroundColor(0xFFFF5722);
         }
+        toast.show();
         setNextQuestion();
 
     }
 
     @SuppressLint("SetTextI18n")
     private void updateScore() {
-        textViewScore.setText(Integer.toString(score));
+        textViewScore.setText(Integer.toString(correctAnswer));
     }
 
 }
