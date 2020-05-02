@@ -31,7 +31,7 @@ public class AnimalTest {
 
     @Test
     public void testGetNameSpanish() {
-        assertEquals("TestName", animal.getName(LocalLocale.SPANISH.getDisplayLanguage()));
+        assertEquals("TestNameSpanish", animal.getName(LocalLocale.SPANISH.getDisplayLanguage()));
     }
 
     @Test

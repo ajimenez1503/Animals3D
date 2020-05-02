@@ -16,4 +16,5 @@
         <item>español</item>
         <item>inglés</item>
     </string-array>
+    <string name="quiz_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 </resources>
