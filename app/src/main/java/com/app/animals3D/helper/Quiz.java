@@ -51,7 +51,7 @@ public class Quiz {
         rand = new Random();
 
         toast = Toast.makeText(activity, "", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER, 0, 150);
+        toast.setGravity(Gravity.BOTTOM, 0, 300);
     }
 
     public void start() {
