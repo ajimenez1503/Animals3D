@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -9,8 +10,8 @@ android {
         applicationId "com.app.animals3D"
         minSdkVersion 24
         targetSdkVersion 29
-        versionCode 3
-        versionName "1.1"
+        versionCode 4
+        versionName "1.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -40,4 +41,5 @@ dependencies {
     implementation 'com.google.ar:core:1.16.0'
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     implementation 'com.google.android.gms:play-services-ads:19.1.0'
+    implementation 'com.google.firebase:firebase-analytics:17.4.0'
 }
