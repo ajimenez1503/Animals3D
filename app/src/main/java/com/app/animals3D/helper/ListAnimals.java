@@ -33,7 +33,10 @@ public class ListAnimals {
                         new Animal("Turtle", R.mipmap.turtle, "https://storage.googleapis.com/ar-answers-in-search-models/static/GreenSeaTurtle/model.glb", R.raw.turtle, "Tortuga"),
                         new Animal("Wolf", R.mipmap.wolf, "https://storage.googleapis.com/ar-answers-in-search-models/static/TimberWolf/model.glb", R.raw.wolf, "Lobo"),
                         new Animal("Hedgehog", R.mipmap.hedgehog, "https://storage.googleapis.com/ar-answers-in-search-models/static/EuropeanHedgehog/model.glb", R.raw.hedgehog, "Herizo"),
-                        new Animal("Crocodile", R.mipmap.crocodile, "https://storage.googleapis.com/ar-answers-in-search-models/static/Alligator/model.glb", R.raw.crocodile, "Cocodrilo")
+                        new Animal("Crocodile", R.mipmap.crocodile, "https://storage.googleapis.com/ar-answers-in-search-models/static/Alligator/model.glb", R.raw.crocodile, "Cocodrilo"),
+                        new Animal("Raccoon", R.mipmap.raccoon, "https://storage.googleapis.com/ar-answers-in-search-models/static/Raccoon/model.glb", R.raw.raccoon, "Mapache"),
+                        new Animal("Deer", R.mipmap.deer, "https://storage.googleapis.com/ar-answers-in-search-models/static/Deer/model.glb", R.raw.deer, "Ciervo")
+
                 )
         );
 
