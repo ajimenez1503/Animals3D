@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "388931716021",
+    "firebase_url": "https://animals-3d.firebaseio.com",
+    "project_id": "animals-3d",
+    "storage_bucket": "animals-3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388931716021:android:050eb2fc66dfdceecbcffc",
+        "android_client_info": {
+          "package_name": "com.app.animals3D"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388931716021-meiql6ppmnodo3acfcvv4kiuje4rersb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMOyy8wo8aeprj_nljQh_yfz_SPvs9JIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388931716021-meiql6ppmnodo3acfcvv4kiuje4rersb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-8303761704769767~7687877317"
+    }
+  ],
+  "configuration_version": "1"
+}
