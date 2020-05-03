@@ -12,8 +12,7 @@
     <string name="quiz_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="animals_3D_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="button_quiz">Preguntas</string>
-    <string name="correct_answer">¡Correcto!</string>
-    <string name="incorrect_answer">¡Incorrecto!</string>
+    <string name="answer">Respuesta</string>
     <string-array name="languages">
         <item>Español</item>
         <item>Inglés</item>

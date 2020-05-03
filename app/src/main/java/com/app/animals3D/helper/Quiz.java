@@ -2,12 +2,13 @@ package com.app.animals3D.helper;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.view.Gravity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.app.animals3D.R;
 
@@ -22,7 +23,8 @@ public class Quiz {
     private final TextView textViewScore;
     private final Spinner spinnerLanguage;
     private final Random rand;
-    private final Toast toast;
+    private final ImageView imageViewAnswer;
+    private final Animation animationZoomIn;
     private int correctAnswer;
     private int incorrectAnswer;
     private int counter;
@@ -50,8 +52,9 @@ public class Quiz {
 
         rand = new Random();
 
-        toast = Toast.makeText(activity, "", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.BOTTOM, 0, 300);
+        imageViewAnswer = activity.findViewById(R.id.answerImageViewId);
+        animationZoomIn = AnimationUtils.loadAnimation(activity, R.anim.zoom_in);
+
     }
 
     public void start() {
@@ -77,7 +80,7 @@ public class Quiz {
         listOptions.get(0).setImageResource(listAnimals.get(counter).getIdDrawable());
         listOptions.get(0).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                answer(R.string.correct_answer);
+                answer(true);
             }
         });
         choosenAnimalIndex.add(counter);
@@ -92,7 +95,7 @@ public class Quiz {
             listOptions.get(i).setImageResource(listAnimals.get(randomNumber).getIdDrawable());
             listOptions.get(i).setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    answer(R.string.incorrect_answer);
+                    answer(false);
                 }
             });
         }
@@ -104,17 +107,19 @@ public class Quiz {
         textView.setText(animal);
     }
 
-    private void answer(int text) {
-        toast.setText(text);
-        if (text == R.string.correct_answer) {
+    private void answer(boolean correct) {
+        if (correct) {
             correctAnswer++;
             updateScore();
-            toast.getView().setBackgroundColor(0xFF8BC34A);
+            imageViewAnswer.setImageResource(R.drawable.tick);
         } else {
             incorrectAnswer++;
-            toast.getView().setBackgroundColor(0xFFFF5722);
+            imageViewAnswer.setImageResource(R.drawable.delete);
         }
-        toast.show();
+        imageViewAnswer.setVisibility(View.VISIBLE);
+        imageViewAnswer.startAnimation(animationZoomIn);
+        imageViewAnswer.setVisibility(View.INVISIBLE);
+
         setNextQuestion();
 
     }
