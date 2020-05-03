@@ -6,20 +6,16 @@ import android.widget.GridView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.app.animals3D.helper.AdHelper;
 import com.app.animals3D.helper.AnimalsAdapter;
 import com.app.animals3D.helper.ListAnimals;
 import com.app.animals3D.helper.SoundsHelper;
 import com.app.animals3D.helper.onClickAction;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class ActivitySounds extends AppCompatActivity {
 
     private static final String TAG = ActivitySounds.class.getSimpleName();
-    private AdView mAdView = null;
+    private AdHelper adHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,17 +29,8 @@ public class ActivitySounds extends AppCompatActivity {
                 ListAnimals.getInstance().get());
         gridView.setAdapter(gridAdapter);
 
-        // Initialize the Mobile Ads SDK.
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-        mAdView = findViewById(R.id.adView2);
-        // Create an ad request.
-        AdRequest adRequest = new AdRequest.Builder().build();
-        // Start loading the ad in the background.
-        mAdView.loadAd(adRequest);
+        // Create ad
+        adHelper = new AdHelper(this, R.string.animals_sounds_banner_ad_unit_id);
     }
 
     @Override
@@ -58,9 +45,7 @@ public class ActivitySounds extends AppCompatActivity {
      */
     @Override
     public void onPause() {
-        if (mAdView != null) {
-            mAdView.pause();
-        }
+        adHelper.pause();
         super.onPause();
     }
 
@@ -70,9 +55,7 @@ public class ActivitySounds extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        if (mAdView != null) {
-            mAdView.resume();
-        }
+        adHelper.resume();
     }
 
     /**
@@ -80,9 +63,7 @@ public class ActivitySounds extends AppCompatActivity {
      */
     @Override
     public void onDestroy() {
-        if (mAdView != null) {
-            mAdView.destroy();
-        }
+        adHelper.destroy();
         super.onDestroy();
     }
 }

@@ -18,64 +18,54 @@
             android:text="@string/text_welcome"
             android:textSize="36sp" />
 
-        <TableLayout
+        <LinearLayout
             android:id="@+id/tableLayout1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView1"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
 
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp">
 
-                <Button
-                    android:id="@+id/button1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="openSoundsActivity"
-                    android:text="@string/button_sounds" />
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+                android:layout_height="40sp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:onClick="openSoundsActivity"
+                android:text="@string/button_sounds"
+                tools:ignore="ButtonStyle" />
 
-            </TableRow>
 
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="40sp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:onClick="open3DActivity"
+                android:text="@string/button_see3D"
+                tools:ignore="ButtonStyle" />
 
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:layout_height="40sp"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:onClick="openQuizActivity"
+                android:text="@string/button_quiz"
+                tools:ignore="ButtonStyle" />
+        </LinearLayout>
 
-                    android:onClick="open3DActivity"
-                    android:text="@string/button_see3D" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
-
-                <Button
-                    android:id="@+id/button3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:onClick="openQuizActivity"
-                    android:text="@string/button_quiz" />
-            </TableRow>
-        </TableLayout>
-
-        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/adView1"
-            android:layout_width="wrap_content"
+        <FrameLayout
+            android:id="@+id/adViewContainer"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            ads:adSize="SMART_BANNER"
-            ads:adUnitId="@string/main_banner_ad_unit_id" />
+            android:layout_centerInParent="true" />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

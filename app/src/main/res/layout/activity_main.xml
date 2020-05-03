@@ -67,14 +67,12 @@
             </TableRow>
         </TableLayout>
 
-        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/adView1"
+        <FrameLayout
+            android:id="@+id/adViewContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            ads:adSize="SMART_BANNER"
-            ads:adUnitId="@string/main_banner_ad_unit_id" />
+            android:layout_centerInParent="true" />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

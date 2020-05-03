@@ -6,33 +6,20 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.app.animals3D.helper.AdHelper;
 import com.app.animals3D.helper.ArCoreHelper;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AdView mAdView = null;
+    private AdHelper adHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize the Mobile Ads SDK.
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-        mAdView = findViewById(R.id.adView1);
-        // Create an ad request.
-        AdRequest adRequest = new AdRequest.Builder().build();
-        // Start loading the ad in the background.
-        mAdView.loadAd(adRequest);
+        // Create ad
+        adHelper = new AdHelper(this, R.string.main_banner_ad_unit_id);
     }
 
     /**
@@ -69,9 +56,7 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     public void onPause() {
-        if (mAdView != null) {
-            mAdView.pause();
-        }
+        adHelper.pause();
         super.onPause();
     }
 
@@ -81,9 +66,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        if (mAdView != null) {
-            mAdView.resume();
-        }
+        adHelper.resume();
     }
 
     /**
@@ -91,9 +74,8 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     public void onDestroy() {
-        if (mAdView != null) {
-            mAdView.destroy();
-        }
+        adHelper.destroy();
         super.onDestroy();
+
     }
 }

@@ -8,16 +8,12 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.app.animals3D.helper.AdHelper;
 import com.app.animals3D.helper.AnimalsAdapter;
 import com.app.animals3D.helper.ArCoreHelper;
 import com.app.animals3D.helper.CameraPermissionHelper;
 import com.app.animals3D.helper.ListAnimals;
 import com.app.animals3D.helper.onClickAction;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.ar.core.Session;
 import com.google.ar.core.exceptions.UnavailableApkTooOldException;
 import com.google.ar.core.exceptions.UnavailableArcoreNotInstalledException;
@@ -28,7 +24,7 @@ public class Activity3D extends AppCompatActivity {
 
     private static final String TAG = Activity3D.class.getSimpleName();
     private Session mSession = null;
-    private AdView mAdView = null;
+    private AdHelper adHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,17 +38,8 @@ public class Activity3D extends AppCompatActivity {
                 ListAnimals.getInstance().get());
         gridView.setAdapter(gridAdapter);
 
-        // Initialize the Mobile Ads SDK.
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-        mAdView = findViewById(R.id.adView2);
-        // Create an ad request.
-        AdRequest adRequest = new AdRequest.Builder().build();
-        // Start loading the ad in the background.
-        mAdView.loadAd(adRequest);
+        // Create ad
+        adHelper = new AdHelper(this, R.string.animals_3D_banner_ad_unit_id);
     }
 
     @Override
@@ -79,9 +66,7 @@ public class Activity3D extends AppCompatActivity {
             }
         }
 
-        if (mAdView != null) {
-            mAdView.resume();
-        }
+        super.onResume();
     }
 
     @Override
@@ -101,9 +86,7 @@ public class Activity3D extends AppCompatActivity {
      */
     @Override
     public void onPause() {
-        if (mAdView != null) {
-            mAdView.pause();
-        }
+        adHelper.pause();
         super.onPause();
     }
 
@@ -113,9 +96,7 @@ public class Activity3D extends AppCompatActivity {
      */
     @Override
     public void onDestroy() {
-        if (mAdView != null) {
-            mAdView.destroy();
-        }
+        adHelper.destroy();
         super.onDestroy();
     }
 }

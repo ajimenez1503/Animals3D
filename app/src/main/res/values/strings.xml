@@ -7,8 +7,9 @@
     <string name="Logging_camera_permission">Camera permission is needed to run this application</string>
     <string name="button_animal">animal</string>
     <string name="main_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="animals_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="animals_sounds_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="quiz_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="animals_3D_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="button_quiz">Quiz</string>
     <string name="correct_answer">Correct!</string>
     <string name="incorrect_answer">Incorrect!</string>

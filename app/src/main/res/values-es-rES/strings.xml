@@ -7,14 +7,15 @@
     <string name="Logging_ARCore_error_not_installed">ARCore no esta installado. Esta funcionalidad no puede ser usada.</string>
     <string name="Logging_camera_permission">Los persmisos de la cámara son necesarios para lanzar la applicacion</string>
     <string name="button_animal">animal</string>
-    <string name="animals_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="main_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="animals_sounds_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="quiz_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="animals_3D_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="button_quiz">Preguntas</string>
     <string name="correct_answer">¡Correcto!</string>
     <string name="incorrect_answer">¡Incorrecto!</string>
     <string-array name="languages">
-        <item>español</item>
-        <item>inglés</item>
+        <item>Español</item>
+        <item>Inglés</item>
     </string-array>
-    <string name="quiz_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 </resources>
